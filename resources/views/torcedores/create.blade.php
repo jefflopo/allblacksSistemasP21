@@ -3,20 +3,7 @@
 @section('content')
 	<h1>Inserção de Dados do Torcedor</h1>
 	<h2 class="mb-3">Cadastrar Novo Torcedor</h2>
-        @if($message = Session::get('success'))
-        <div class="alert alert-success">
-            {{$message}}
-        </div>
-        @endif
-        @if(count($errors) > 0)
-        <div class="alert alert-danger"
-             <ul>
-                @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
+        
 	<form method="POST" action="{{url('torcedores')}}">
             @csrf
         <div class="form-row">
